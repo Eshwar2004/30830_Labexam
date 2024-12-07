@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Employee Bean -->
+    <bean id="employee" class="Labexam.com.klef.exam.Employee">
+        <constructor-arg value="30830" />
+        <constructor-arg value="Eshwar" />
+        <constructor-arg value="50000.0" />
+        <constructor-arg value="cse" />
+        <constructor-arg>
+            <list>
+                <value>Java</value>
+                <value>C</value>
+                <value>python</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Instructor Bean -->
+    <bean id="instructor" class="Labexam.com.klef.exam.Instructor">
+        <property name="instructorId" value="1" />
+        <property name="name" value="Dr.Esh" />
+        <property name="email" value="esh@mail.com" />
+        <property name="phoneNumber" value="123859647" />
+    </bean>
+
+    <!-- Course Bean -->
+    <bean id="course" class="Labexam.com.klef.exam.Course" autowire="byType">
+        <property name="courseId" value="501" />
+        <property name="courseName" value="jfsd" />
+        <property name="credits" value="3" />
+    </bean>
+</beans>
